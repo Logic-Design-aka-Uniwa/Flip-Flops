@@ -15,7 +15,7 @@
 </p>
 
 <h1 align="center" style="letter-spacing: 1px;">
-  Adders Deductors
+  Flip Flops
 </h1>
 
 <p align="center">
