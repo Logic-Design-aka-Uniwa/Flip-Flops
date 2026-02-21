@@ -86,90 +86,100 @@
 
 ---
 
-# README
+# INSTALL
 
 ## Flip Flops
 
-This repository contains the documentation and circuit simulations for **Workshop 3** of the **Digital Design** course at the **University of West Attica**. The project focuses on the **operation and implementation of sequential logic circuits**, specifically latches and flip-flops.
+This repository contains **Workshop 3 – Flip-Flops** simulations and documentation for the **Digital Design** course at the **University of West Attica**. The focus is on **sequential circuits**, including latches, flip-flops, and counters.
+
+All simulations are implemented using **NI Multisim**.
 
 ---
 
-## Table of Contents
+## 1. Prerequisites
 
-| Section | Folder/File                        | Description                                                |
-| ------: | ---------------------------------- | ---------------------------------------------------------- |
-|       1 | `assign/`                          | Assignment material for the Flip-Flops workshop            |
-|     1.1 | `assign/ASSIGNMENT 3.pdf`          | Assignment description in English                          |
-|     1.2 | `assign/ΕΡΓΑΣΙΑ 3.pdf`             | Assignment description in Greek                            |
-|       2 | `docs/`                            | Documentation covering flip-flops theory and memory states |
-|     2.1 | `docs/Flip-Flops.pdf`              | English documentation for flip-flops                       |
-|     2.2 | `docs/Κατάσταση-Μνήμης.pdf`        | Greek documentation for flip-flops and memory states       |
-|       3 | `multisim/`                        | Multisim flip-flop and counter simulation files            |
-|     3.1 | `multisim/D-Flip-Flop.ms14`        | D Flip-Flop circuit simulation                             |
-|     3.2 | `multisim/RS-Flip-Flop.ms14`       | RS Flip-Flop circuit simulation                            |
-|     3.3 | `multisim/counter.ms14`            | Counter circuit simulation                                 |
-|     3.4 | `multisim/pentagon-with-NAND.ms14` | Pentagon sequence generator using NAND gates               |
-|       4 | `README.md`                        | Project documentation                                      |
-|       5 | `INSTALL.md`                       | Usage instructions                                         |
+### 1.1 Required Software
+
+- **NI Multisim 14** or later  
+  Required to open and run `.ms14` simulation files.
+
+Download:  
+https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html
+
+### 1.2 Optional Software
+
+- **PDF Viewer** to open documentation files (`Flip-Flops.pdf`, `Κατάσταση-Μνήμης.pdf`)
+- **Git** for cloning the repository
 
 ---
 
-## 1. Project Overview
+## 2. Installation Steps
 
-The objective of this workshop is to explore the **fundamental behavior of sequential circuits** through theoretical analysis and software simulation.
+### 2.1 Clone the Repository
 
-### Key Topics Covered
+Clone using Git:
 
-- **Latches:** NAND and NOR gate implementations
-- **Flip-Flops:** RS, D, JK, T, and Master-Slave configurations
-- **Operational Features:** Excitation tables, asynchronous inputs, and clock triggering
+```bash
+git clone https://github.com/Logic-Design-aka-Uniwa/Flip-Flops.git
+```
 
----
+Or download the project as a ZIP file and extract it manually.
 
-## 2. Technical Specifications
+### 2.2 Navigate to Project Directory
 
-### 2.1 Simulation Tools
+```bash
+cd Flip-Flops
+```
 
-- NI Multisim for circuit design, simulation, and testing
+Ensure the following folder structure exists:
 
-### 2.2 Components Used
-
-- **Logic Gates:** AND, OR, NOR, NAND, XOR, XNOR, NOT
-- **Hardware Elements:** VCC sources (5V), ground, cables, switches
-- **Monitoring Tools:** Logic lamps and oscilloscopes for signal visualization
-
----
-
-## 3. Exercises and Results
-
-### 3.1 NAND Gate Latch (Exercise 5.2.1)
-
-Analyzes the truth table of a **basic cross-coupled NAND gate latch**.
-
-| S   | R   | Q   | NOT_Q | Result Description   |
-| --- | --- | --- | ----- | -------------------- |
-| 0   | 0   | 0   | 1     | Theoretical State    |
-| 1   | 0   | 1   | 1     | Invalid / Prohibited |
-| 0   | 1   | 0   | 1     | Reset State          |
-| 1   | 1   | 1   | 0     | Set State            |
+```bash
+assign/
+docs/
+multisim/
+README.md
+```
 
 ---
 
-## 4. RS Flip-Flop (Exercise 5.2.2)
+## 3. Multisim Simulation Files
 
-Analysis of a **clocked RS Flip-Flop** implementation.
+The repository includes simulation files for the main arithmetic circuits:
 
-| S   | R   | Q   | NOT_Q |
-| --- | --- | --- | ----- |
-| 0   | 0   | 1   | 0     |
-| 1   | 0   | ?   | ?     |
-| 0   | 1   | 1   | 1     |
-| 1   | 1   | 0   | 1     |
+| File                               | Description                                  |
+| ---------------------------------- | -------------------------------------------- |
+| `multisim/D-Flip-Flop.ms14`        | D Flip-Flop simulation                       |
+| `multisim/RS-Flip-Flop.ms14`       | RS Flip-Flop simulation                      |
+| `multisim/counter.ms14`            | Counter circuit simulation                   |
+| `multisim/pentagon-with-NAND.ms14` | Pentagon sequence generator using NAND gates |
 
-> **Note:** Detailed simulation captures for each input combination (S=0/R=0, S=1/R=0, etc.) are included in the documentation.
+These circuits cover sequential behavior, memory storage, and clocked operation.
+
+### 4. Open a Simulation in Multisim
+
+1. Launch **NI Multisim**.
+2. Select **File** → **Open**.
+3. Navigate to the repository folder.
+4. Open the `multisim/` directory.
+5. Select a `.ms14` file.
+6. Wait for the circuit to load.
+7. Run the simulation using the Run button.
 
 ---
 
-## 5. Conclusion
+## 5. Open the Documentation
 
-Workshop 3 emphasizes the behavior and design of **sequential circuits**, building a foundation for memory elements in digital systems and demonstrating how **flip-flops** can store and manipulate binary information reliably.
+1. Navigate to the `docs/` folder.
+2. Open the preferred documentation:
+
+| Language | File                        |
+| -------- | --------------------------- |
+| English  | `docs/Flip-Flops.pdf`       |
+| Greek    | `docs/Κατάσταση-Μνήμης.pdf` |
+
+The documentation includes:
+
+- Circuit theory and memory states
+- Flip-flop operation tables (RS, D, JK, T, Master-Slave)
+- Excitation and truth tables
+- Multisim implementation and screenshots
